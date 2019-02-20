@@ -10,7 +10,7 @@ FROM node:9-slim
 RUN npm install
 # We then copy the rest of our application
 # to the app direcoty
-COPY . src/app
+#COPY . src/app
 # We start our application by calling
 # npm start.
 CMD ["npm", "start"]
