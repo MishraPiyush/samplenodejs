@@ -14,3 +14,4 @@ COPY . src/app
 # We start our application by calling
 # npm start.
 CMD ["npm", "start"]
+EXPOSE 4200
