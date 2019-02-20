@@ -2,12 +2,12 @@
 FROM node:alpine
 # WORKDIR specifies the directory our 
 # application's code will live within
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+#RUN mkdir /usr/src/app
+WORKDIR  /app
+#ENV PATH /usr/src/app/node_modules/.bin:$PATH
 # We copy our package.json file to our 
 # app directory
-COPY package.json /usr/src/app/package.json
+COPY *.json /app/package.json
 # We then run npm install to install
 # express for our application
 #RUN ping 8.8.8.8 -c 2
