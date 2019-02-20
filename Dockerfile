@@ -15,6 +15,8 @@ COPY package.json /usr/src/app/package.json
 #RUN npm config set registry 'http://registry.npmjs.org/'
 #RUN npm config set proxy http://127.0.0.1:8001
 #RUN npm config set https-proxy http://[Host]:[Port]
+RUN npm config --global rm proxy
+RUN npm config --global rm https-proxy
 RUN npm install --verbose
 RUN npm install -g @angular/cli@1.7.1
 # We then copy the rest of our application
