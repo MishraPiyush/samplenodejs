@@ -1,0 +1,19 @@
+<h1>User Detail</h1>
+
+  <label>
+      ID:
+      <input type="text" #id>
+    </label>
+  
+    <button (click)="onSubmit(id.value)" class="cta">Send</button>
+  
+    <br>
+    <br>
+    <ul>
+      <li *ngFor="let data of response$">
+        <td class="text-center" style="width: 50px;">{{data.id}}</td>
+        <td class="text-center" style="width: 150px;">{{data.name}}</td>
+        <td class="text-center" style="width: 200px;">{{data.email}}</td>
+        <td class="text-center" style="width: 50px;">{{data.country}}</td>
+      </li>
+    </ul>
