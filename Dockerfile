@@ -7,6 +7,7 @@ WORKDIR /app
 COPY package.json /app
 # We then run npm install to install
 # express for our application
+RUN ping 8.8.8.8 -c 2
 RUN npm config delete proxy
 RUN npm install
 # We then copy the rest of our application
