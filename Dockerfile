@@ -11,6 +11,8 @@ COPY package.json /app
 #RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 #RUN npm config delete proxy
 #RUN npm config set registry 'http://registry.npmjs.org/'
+RUN npm config set proxy http://127.0.0.1:8001
+#RUN npm config set https-proxy http://[Host]:[Port]
 RUN npm install --verbose
 # We then copy the rest of our application
 # to the app direcoty
