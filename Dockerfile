@@ -7,7 +7,7 @@ WORKDIR  /app
 #ENV PATH /usr/src/app/node_modules/.bin:$PATH
 # We copy our package.json file to our 
 # app directory
-COPY *.json /app/package.json
+COPY *.json /app/
 # We then run npm install to install
 # express for our application
 #RUN ping 8.8.8.8 -c 2
