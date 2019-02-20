@@ -1,10 +1,10 @@
 FROM node:9-slim
 # WORKDIR specifies the directory our 
 # application's code will live within
-WORKDIR src/app
+#WORKDIR src/app
 # We copy our package.json file to our 
 # app directory
-COPY package.json src/app
+#COPY package.json src/app
 # We then run npm install to install
 # express for our application
 RUN npm install
