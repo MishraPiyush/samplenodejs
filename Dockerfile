@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:9
 # WORKDIR specifies the directory our 
 # application's code will live within
 WORKDIR /app
