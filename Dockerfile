@@ -18,7 +18,7 @@ COPY package.json /usr/src/app/package.json
 RUN npm config --global rm proxy
 RUN npm config --global rm https-proxy
 RUN npm install --verbose
-RUN npm install -g @angular/cli@1.7.1
+#RUN npm install -g 
 # We then copy the rest of our application
 # to the app direcoty
 COPY . /usr/src/app
