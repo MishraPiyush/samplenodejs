@@ -7,6 +7,7 @@ WORKDIR /app
 COPY package.json /app
 # We then run npm install to install
 # express for our application
+RUN npm config delete proxy
 RUN npm install
 # We then copy the rest of our application
 # to the app direcoty
