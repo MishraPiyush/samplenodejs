@@ -8,8 +8,10 @@ COPY package.json /app
 # We then run npm install to install
 # express for our application
 #RUN ping 8.8.8.8 -c 2
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 RUN npm config delete proxy
-RUN npm install
+RUN npm config set registry 'http://registry.npmjs.org/'
+RUN npm install --verbose
 # We then copy the rest of our application
 # to the app direcoty
 COPY . /app
