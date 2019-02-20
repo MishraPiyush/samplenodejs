@@ -32,6 +32,8 @@
 FROM node:7
 WORKDIR /app
 RUN whoami
+RUN ping 8.8.8.8 -c 2
+RUN npm config set registry 'http://registry.npmjs.org/'
 COPY package.json /app
 RUN npm install
 COPY . /app
